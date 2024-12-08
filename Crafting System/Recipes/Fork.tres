@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CraftingRecipe" load_steps=6 format=3 uid="uid://cos7qmaah7djp"]
+
+[ext_resource type="Resource" uid="uid://hfwtnlmkjhlc" path="res://Items/Item Data/Fork.tres" id="1_eyue2"]
+[ext_resource type="Script" path="res://Crafting System/CraftingRecipe.gd" id="1_unlm8"]
+[ext_resource type="Resource" uid="uid://dpysu3dp2e11o" path="res://Items/Item Data/Iron.tres" id="2_k2fyl"]
+[ext_resource type="Script" path="res://Crafting System/CraftingRecipeRequirement.gd" id="3_rfwkw"]
+
+[sub_resource type="Resource" id="Resource_obj2m"]
+script = ExtResource("3_rfwkw")
+item = ExtResource("2_k2fyl")
+quantity = 2
+
+[resource]
+script = ExtResource("1_unlm8")
+item = ExtResource("1_eyue2")
+requirements = Array[ExtResource("3_rfwkw")]([SubResource("Resource_obj2m")])

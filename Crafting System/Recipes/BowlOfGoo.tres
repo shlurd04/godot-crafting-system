@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CraftingRecipe" load_steps=8 format=3 uid="uid://ds4mo7gdxxuuk"]
+
+[ext_resource type="Resource" uid="uid://57fn1oiik5jr" path="res://Items/Item Data/BowlOfGoo.tres" id="1_a73wp"]
+[ext_resource type="Resource" uid="uid://dn8bqf0vxpj45" path="res://Items/Item Data/Bowl.tres" id="2_urpt0"]
+[ext_resource type="Script" path="res://Crafting System/CraftingRecipeRequirement.gd" id="3_whffd"]
+[ext_resource type="Resource" uid="uid://dugkdpfwm6ha2" path="res://Items/Item Data/Goo.tres" id="4_tpf1m"]
+[ext_resource type="Script" path="res://Crafting System/CraftingRecipe.gd" id="5_20lnm"]
+
+[sub_resource type="Resource" id="Resource_xlul4"]
+script = ExtResource("3_whffd")
+item = ExtResource("2_urpt0")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_27ktn"]
+script = ExtResource("3_whffd")
+item = ExtResource("4_tpf1m")
+quantity = 1
+
+[resource]
+script = ExtResource("5_20lnm")
+item = ExtResource("1_a73wp")
+requirements = Array[ExtResource("3_whffd")]([SubResource("Resource_xlul4"), SubResource("Resource_27ktn")])
